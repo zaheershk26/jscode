@@ -1,0 +1,30 @@
+<html>
+<body>
+    <!--
+    <p>This example uses the addEventListener() method to attach a "mouseover" and "mouseout" event to a h1 element.</p>
+
+<h1 id="demo">Mouse over me</h1>
+
+<script>
+document.getElementById("demo").addEventListener("mouseover", mouseOver);
+document.getElementById("demo").addEventListener("mouseout", mouseOut);
+
+function mouseOver() {
+  document.getElementById("demo").style.color = "red";
+}
+
+function mouseOut() {
+  document.getElementById("demo").style.color = "black";
+}
+</script>
+-->
+   <h2> Image rollover with mouse event. </h2>
+   <h4> Rollover on the below image to change the styles of the image. </h4>
+   <img src="images/thumb.jpg" style="height:100px;width:100px;" id="demo" name="demo" alt="demo Image">
+   <script>
+      let deomImage = document.getElementById("demo");
+      deomImage.onmouseover = function() {deomImage.style = "height:200px; width:200px";};
+      deomImage.onmouseout = function() {deomImage.style = "height:100px; width:100px";};
+   </script>
+</body>
+</html>

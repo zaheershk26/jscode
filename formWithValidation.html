@@ -1,0 +1,107 @@
+<html>
+<head>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+
+  //validation for Pass
+  let p = document.forms["myForm"]["pass"].value;
+  if ((p == "") || (p.length <= 8)) {
+    alert("Password must be filled out and It atleast 8 char.");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<form name="myForm" action="slideshow.html" onsubmit="return validateForm()" method="post">
+<table>
+    <tr>
+        <td>Name</td>
+        <td>:</td>
+        <td><input type="text" name="fname"></td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>:</td>
+        <td><input type="password" name="pass"></td>
+    </tr>
+    <tr>
+        <td>Dropdown</td>
+        <td>:</td>
+        <td><select name="cars" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">BMW</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+            <option value="audi">Maruti Suzuki</option>
+          </select></td>
+    </tr>
+    <tr>
+        <td>Radio Button</td>
+        <td>:</td>
+        <td><input type="radio" id="html" name="gender" value="male">Male
+            <input type="radio" id="css" name="gender" value="female">Female</td>
+    </tr>
+    <tr>
+        <td>Checkbox</td>
+        <td>:</td>
+        <td><input type="checkbox" id="hobby" name="vehicle1" value="football">Football
+            <input type="checkbox" id="hobby2" name="hobby2" value="cricket">Cricket
+            <input type="checkbox" id="hobby3" name="hobby3" value="basket">Basketball</td>
+    </tr>
+    <tr>
+        <td>Select Color</td>
+        <td>:</td>
+        <td><input type="color" id="favcolor" name="favcolor"></td>
+    </tr>
+    <tr>
+        <td>Birthday</td>
+        <td>:</td>
+        <td><input type="date" id="birthday" name="birthday"></td>
+    </tr>
+    <tr>
+        <td>Birthday (date and time)</td>
+        <td>:</td>
+        <td><input type="datetime-local" id="birthdaytime" name="birthdaytime"></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>:</td>
+        <td><input type="email"></td>
+    </tr>
+    <tr>
+        <td>Upload File</td>
+        <td>:</td>
+        <td><input type="file"></td>
+    </tr>
+    <tr>
+        <td>Range Field</td>
+        <td>:</td>
+        <td><input type="range" id="vol" name="vol" min="0" max="50"></td>
+    </tr>
+    <tr>
+        <td>Select Number</td>
+        <td>:</td>
+        <td><input type="number" id="quantity" name="quantity" min="1" max="5"></td>
+    </tr>
+    <tr>
+        <td>Jump URL</td>
+        <td>:</td>
+        <td><a href="https://www.facebook.com/" target="_blank">Visit Facebook Page</a></td>
+    </tr>
+    <tr>
+        <td colspan="3"><input type="submit" value="Submit"><input type="reset"></td>
+    </tr>  
+</table>
+</form>
+
+</body>
+</html>
